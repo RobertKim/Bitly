@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Welcome to Nately!</h1>
+
+  <h2>Enter a url to shorten:</h2>
+
+  <form name="input" method="post" action="/">
+    <input type="text" name="url">
+    <input type="submit" value="Shorten!"><br><br>
+  </form>
+  
+  <h3> Natelified urls! </h3>
+  <% @urls.each do |url| %>
+  <a href=<%= url.short_url %>><%= url.short_url %></a><br>
+  <% end %>
+   
+</div>
